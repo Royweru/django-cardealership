@@ -8,13 +8,23 @@ class Make(models.Model):
     name=models.CharField(max_length=50)
     image = models.ImageField(upload_to='media/images/make', height_field=None, width_field=None, max_length=None)
     
+    def __str__(self):
+        return self.name
+    
 class BodyType(models.Model):
     name= models.CharField(max_length=100)
     image = models.ImageField( upload_to='media/images/body', height_field=None, width_field=None, max_length=None)
     
+    def _str_(self):
+        return self.name
+    
 class Model(models.Model):
      name= models.CharField(max_length=100)
      make = models.ForeignKey(Make,on_delete = models.SET_NULL, null = True)
+     
+     def _str_(self):
+         return self.name
+    
 class Car(models.Model):
     make = models.ForeignKey(Make,on_delete=models.SET_NULL,null=True)
     body = models.ForeignKey(BodyType,on_delete= models.SET_NULL,null=True)

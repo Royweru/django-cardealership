@@ -191,10 +191,11 @@
 
 											  	<option value="default">model</option><!-- /.option-->
 
-											  	<option value="kia-rio">kia-rio</option><!-- /.option-->
-
-											  	<option value="mitsubishi">mitsubishi</option><!-- /.option-->
-											  	<option value="ford">ford</option><!-- /.option-->
+											  	
+												{% for model in models %}
+												<option value="default">{{model.name}}</option>
+												{% endfor %}
+													
 
 											</select><!-- /.select-->
 										</div><!-- /.model-select-icon -->
