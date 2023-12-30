@@ -8,3 +8,7 @@ def index(request):
     makes = Make.objects.all()
     context = {'cars':cars,'models':models,'makes':makes}
     return render(request,'index.html',context)
+
+
+def create_car(request):
+    return render(request,'new-form.html')
