@@ -5,5 +5,6 @@ from .models import Car,Model,Make
 def index(request):
     cars =Car.objects.all()
     models = Model.objects.all()
-    context = {'cars':cars,'models':models}
+    makes = Make.objects.all()
+    context = {'cars':cars,'models':models,'makes':makes}
     return render(request,'index.html',context)

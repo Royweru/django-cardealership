@@ -158,12 +158,12 @@
 											<select class="form-control">
 
 											  	<option value="default">make</option><!-- /.option-->
-
-											  	<option value="toyota">toyota</option><!-- /.option-->
-
-											  	<option value="holden">holden</option><!-- /.option-->
-											  	<option value="maecedes-benz">maecedes-benz.</option><!-- /.option-->
-
+												 
+												 {% for make in makes %}
+												 <option value="default">{{make}}</option><!-- /.option-->
+												 
+												 {% endfor %}
+													
 											</select><!-- /.select-->
 										</div><!-- /.model-select-icon -->
 									</div>
