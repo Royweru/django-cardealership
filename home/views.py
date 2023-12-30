@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Car,Model,Make
+from .forms import CarForm
 # Create your views here.
 
 def index(request):
@@ -11,4 +12,6 @@ def index(request):
 
 
 def create_car(request):
-    return render(request,'new-form.html')
+    form = CarForm()
+    context = {'form':form}
+    return render(request,'new-form.html',context)
